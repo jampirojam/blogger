@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta content='width=device-width, initial-scale=1' name='viewport' />
+    <title>OJAM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo">
+            <a class="logo-header click-in">
+                <h1>OJ(</h1>
+                <img alt='logo' src='./assets/img/ojam.png' />
+                <h1>)M</h1>
+            </a>
+        </div>
+        <div class="navigation">
+            <nav class="nav-menu">
+                <a class="blog click-in" href="https://brojamz.blogspot.com" target="_blank">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.26 3.59997L5.04997 12.29C4.73997 12.62 4.43997 13.27 4.37997 13.72L4.00997 16.96C3.87997 18.13 4.71997 18.93 5.87997 18.73L9.09997 18.18C9.54997 18.1 10.18 17.77 10.49 17.43L18.7 8.73997C20.12 7.23997 20.76 5.52997 18.55 3.43997C16.35 1.36997 14.68 2.09997 13.26 3.59997Z"  stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.89 5.05005C12.32 7.81005 14.56 9.92005 17.34 10.2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 22H21" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="nav-text">Blog</p>
+                </a>
+                <a class="show-menu click-in" target="profile">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.1601 10.87C12.0601 10.86 11.9401 10.86 11.8301 10.87C9.45006 10.79 7.56006 8.84 7.56006 6.44C7.56006 3.99 9.54006 2 12.0001 2C14.4501 2 16.4401 3.99 16.4401 6.44C16.4301 8.84 14.5401 10.79 12.1601 10.87Z"
+                             stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M7.15997 14.56C4.73997 16.18 4.73997 18.82 7.15997 20.43C9.90997 22.27 14.42 22.27 17.17 20.43C19.59 18.81 19.59 16.17 17.17 14.56C14.43 12.73 9.91997 12.73 7.15997 14.56Z"
+                             stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="nav-text">Profile</p>
+                </a>
+                <a class="show-menu click-in" target="skills">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.38 12L10.79 14.42L15.62 9.57996" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.75 2.44995C11.44 1.85995 12.57 1.85995 13.27 2.44995L14.85 3.80995C15.15 4.06995 15.71 4.27995 16.11 4.27995H17.81C18.87 4.27995 19.74 5.14995 19.74 6.20995V7.90995C19.74 8.29995 19.95 8.86995 20.21 9.16995L21.57 10.7499C22.16 11.4399 22.16 12.5699 21.57 13.2699L20.21 14.8499C19.95 15.1499 19.74 15.7099 19.74 16.1099V17.8099C19.74 18.8699 18.87 19.7399 17.81 19.7399H16.11C15.72 19.7399 15.15 19.9499 14.85 20.2099L13.27 21.5699C12.58 22.1599 11.45 22.1599 10.75 21.5699L9.17 20.2099C8.87 19.9499 8.31 19.7399 7.91 19.7399H6.18C5.12 19.7399 4.25 18.8699 4.25 17.8099V16.0999C4.25 15.7099 4.04 15.1499 3.79 14.8499L2.44 13.2599C1.86 12.5699 1.86 11.4499 2.44 10.7599L3.79 9.16995C4.04 8.86995 4.25 8.30995 4.25 7.91995V6.19995C4.25 5.13995 5.12 4.26995 6.18 4.26995H7.91C8.3 4.26995 8.87 4.05995 9.17 3.79995L10.75 2.44995Z" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="nav-text">Skills</p>
+                </a>
+                <a class="show-menu click-in" target="project">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 13V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H13"  stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7.33008 14.49L9.71008 11.4C10.0501 10.96 10.6801 10.88 11.1201 11.22L12.9501 12.66C13.3901 13 14.0201 12.92 14.3601 12.49L16.6701 9.51001"  stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19.48 15.8199L19.76 16.3899C19.9 16.6699 20.25 16.9299 20.56 16.9899L20.94 17.0499C22.08 17.2399 22.35 18.0799 21.53 18.9099L21.18 19.2599C20.95 19.4999 20.82 19.9599 20.89 20.2799L20.94 20.4899C21.25 21.8699 20.52 22.3999 19.32 21.6799L19.06 21.5299C18.75 21.3499 18.25 21.3499 17.94 21.5299L17.68 21.6799C16.47 22.4099 15.74 21.8699 16.06 20.4899L16.1099 20.2799C16.1799 19.9599 16.05 19.4999 15.82 19.2599L15.47 18.9099C14.65 18.0799 14.92 17.2399 16.06 17.0499L16.44 16.9899C16.74 16.9399 17.1 16.6699 17.24 16.3899L17.52 15.8199C18.06 14.7299 18.94 14.7299 19.48 15.8199Z"  stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="nav-text">Project</p>
+                </a>
+                <a class="show-menu click-in" target="contact">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 7.16C17.94 7.15 17.87 7.15 17.81 7.16C16.43 7.11 15.33 5.98 15.33 4.58C15.33 3.15 16.48 2 17.91 2C19.34 2 20.49 3.16 20.49 4.58C20.48 5.98 19.38 7.11 18 7.16Z"  stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.9699 14.44C18.3399 14.67 19.8499 14.43 20.9099 13.72C22.3199 12.78 22.3199 11.24 20.9099 10.3C19.8399 9.59004 18.3099 9.35003 16.9399 9.59003"  stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.96998 7.16C6.02998 7.15 6.09998 7.15 6.15998 7.16C7.53998 7.11 8.63998 5.98 8.63998 4.58C8.63998 3.15 7.48998 2 6.05998 2C4.62998 2 3.47998 3.16 3.47998 4.58C3.48998 5.98 4.58998 7.11 5.96998 7.16Z"  stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.99994 14.44C5.62994 14.67 4.11994 14.43 3.05994 13.72C1.64994 12.78 1.64994 11.24 3.05994 10.3C4.12994 9.59004 5.65994 9.35003 7.02994 9.59003"  stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 14.63C11.94 14.62 11.87 14.62 11.81 14.63C10.43 14.58 9.32996 13.45 9.32996 12.05C9.32996 10.62 10.48 9.46997 11.91 9.46997C13.34 9.46997 14.49 10.63 14.49 12.05C14.48 13.45 13.38 14.59 12 14.63Z"  stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.08997 17.78C7.67997 18.72 7.67997 20.26 9.08997 21.2C10.69 22.27 13.31 22.27 14.91 21.2C16.32 20.26 16.32 18.72 14.91 17.78C13.32 16.72 10.69 16.72 9.08997 17.78Z"  stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="nav-text">Contact</p>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="main">
+            <a>Hello, I'm Ojam.</a>
+            <p></p>
+        </div>
+
+        <div id="show-profile" class="show" style="display: none;">
+            <h2>About Ojam</h2>
+            <p>
+                Hail hello...
+            </p>
+            <p>
+                My name is Ojam, an amateur writer who loves to write anything that I want to, and also likes to learn various things interest me. Kinda weird ya! 'cause mostly that made me interest wasn't related with my current work, hehehe. But..., it makes me happier than doing nothing, hahaha.</p>
+            <p>
+                I'm sorry, laughing out to loud. Oke, I will continue, got a lot knowledge in various fields when I was studying is the key, even tho it just nothing now, but I believe it will something then. Oh yah, if you play "AOV" let's play together, hehehe.
+            </p>
+            <p>
+                That's my quick intro, for more information, just check my curriculum vitae, thank you.
+            </p>
+
+            <div class="profile-button">
+                <svg height='38' width='172.3'>
+                    <path d='M 165 0 L 172 0 L 172 7 L 171 7 L 171 1 L 165 1 Z' fill='#000000' />
+                    <path d='M 0 25 L 0 32 L 7 32 L 7 31 L 1 31 L 1 31 Z' fill='#000000' />
+                    <a class="show-menu click-in" target="cv">
+                        <path d='M   0  0 L   155  0 L   172  13 L   172  32 L   17  32 L   0  19 Z' stroke='#000000'
+                            stroke-width='1' fill='none'></path>
+                        <text alignment-baseline='middle' class='text-explore' fill='#000000' text-anchor='middle'
+                            x='85' y='16'>
+                            Curriculum Vitae
+                        </text>
+                    </a>
+                </svg>
+            </div>
+        </div>
+
+        <div id="show-project" class="show" style="display: none;">
+            <h2>Projects</h2>
+            <p class="project-intro">Professional, not academic, career project lists.</p>
+            <div class="project-wrapper container">
+                <div class="project-list">
+                    <h3>Operation Sharia Platform</h3>
+                    <a class="project click-in">
+                        <img src="./assets/img/bfi.png" alt="">
+                        <div class="overlay">
+                            <svg fill="#FFF" width="50px" height="50px" viewBox="0 0 32 32" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 1v4.5h-10.5l3 3-7.5 7.5h4.5v10.5l3-3 7.5 7.5v-4.5h10.5l-3-3 7.5-7.5h-4.5v-10.5l-3 3-7.5-7.5zM16 8.5c4.142 0 7.5 3.358 7.5 7.5s-3.358 7.5-7.5 7.5-7.5-3.358-7.5-7.5c0-4.142 3.358-7.5 7.5-7.5zM19 16c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z">
+                                </path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="project-list">
+                    <h3>Surveyor Sharia Platform</h3>
+                    <a class="project click-in">
+                        <img src="./assets/img/bfi.png" alt="">
+                        <div class="overlay">
+                            <svg fill="#FFF" width="50px" height="50px" viewBox="0 0 32 32" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 1v4.5h-10.5l3 3-7.5 7.5h4.5v10.5l3-3 7.5 7.5v-4.5h10.5l-3-3 7.5-7.5h-4.5v-10.5l-3 3-7.5-7.5zM16 8.5c4.142 0 7.5 3.358 7.5 7.5s-3.358 7.5-7.5 7.5-7.5-3.358-7.5-7.5c0-4.142 3.358-7.5 7.5-7.5zM19 16c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z">
+                                </path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-list">
+                    <h3>Operation Platform</h3>
+                    <a class="project click-in">
+                        <img src="./assets/img/bfi.png" alt="">
+                        <div class="overlay">
+                            <svg fill="#FFF" width="50px" height="50px" viewBox="0 0 32 32" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 1v4.5h-10.5l3 3-7.5 7.5h4.5v10.5l3-3 7.5 7.5v-4.5h10.5l-3-3 7.5-7.5h-4.5v-10.5l-3 3-7.5-7.5zM16 8.5c4.142 0 7.5 3.358 7.5 7.5s-3.358 7.5-7.5 7.5-7.5-3.358-7.5-7.5c0-4.142 3.358-7.5 7.5-7.5zM19 16c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z">
+                                </path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-list">
+                    <h3>Surveyor Platform</h3>
+                    <a class="project click-in">
+                        <img src="./assets/img/bfi.png" alt="">
+                        <div class="overlay">
+                            <svg fill="#FFF" width="50px" height="50px" viewBox="0 0 32 32" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 1v4.5h-10.5l3 3-7.5 7.5h4.5v10.5l3-3 7.5 7.5v-4.5h10.5l-3-3 7.5-7.5h-4.5v-10.5l-3 3-7.5-7.5zM16 8.5c4.142 0 7.5 3.358 7.5 7.5s-3.358 7.5-7.5 7.5-7.5-3.358-7.5-7.5c0-4.142 3.358-7.5 7.5-7.5zM19 16c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z">
+                                </path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="show-contact" class="show" style="display: none;">
+            <h2>Contact & Social Media</h2>
+            <h3>Send Me WhatsApp Message!</h3>
+            <div class="whatsapp-wrapper">
+                <textarea id="whatsapp" placeholder="Type your WhatsApp message here..."></textarea>
+                <div>
+                    <p class="whatsapp-preview-title">Preview:</p>
+                    <div class="scrollable">
+                        <p class="whatsapp-preview"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="note-list">
+                <p>Note:</p>
+                <p>Use b>>TEXT*> to make it bold</p>
+                <p>Use i>>TEXT_> to make it italic</p>
+            </div>
+            <input type="button" id="whatsapp-button" class="button" onclick="getWhatsAppUrl()" value="Send">
+            <input type="button" id="reset-button" class="button" value="Reset">
+            <div class="break-point"></div>
+            <h3>Let's Connect!</h3>
+            <div class="contact-wrapper">
+                <div class="contact-list">
+                    <a href="https://wa.me/628388886086" target="_blank">
+                        +62 838 8886 086
+                    </a>
+                    <a href="mailto:jampirojam@gmail.com" target="_blank">
+                        jampirojam@gmail.com
+                    </a>
+                </div>
+                <div class="socmed-list">
+                    <a href="https://linkedin.com/in/jampirojam" target="_blank">
+                        <svg fill="#000000" class="socmed-icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512" xml:space="preserve">
+                            <path d="M329,145h-432c-22.1,0-40,17.9-40,40v432c0,22.1,17.9,40,40,40h432c22.1,0,40-17.9,40-40V185C369,162.9,351.1,145,329,145z
+                            M41.4,508.1H-8.5V348.4h49.9V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7
+                            c18.4,0,29.7,11.9,30.1,27.7C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4
+                            c-14.9,0-23.2,10-27,19.6c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6
+                            c35.5,0,63.3,23,63.3,72.4V508.1z" />
+                        </svg>
+                        <p class="socmed-text">LinkedIn</p>
+                    </a>
+                    <a href="https://github.com/jampirojam" target="_blank">
+                        <svg fill="#000000" class="socmed-icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512" xml:space="preserve">
+                            <g>
+                                <path d="M177.1,398.4c-8.6-1.5-17.6-1.3-26.4-0.8c-20,1.1-40,3-60,1.2c-9.5-0.9-19.1-1.8-28.7-1.6c-17.4,0.3-32,6-40.6,22.6
+                                    c-4.3,8.2-5.3,17-5,26.1c0.7,25.6,11.8,40.2,36.2,47.5c19.6,5.8,39.7,6.6,59.9,6.2c7.5,0,15,0.4,22.5-0.1
+                                    c15.5-0.9,30.7-3.2,45.4-8.6c15.2-5.6,24.3-16.3,27.6-31.8c1.3-6,1.9-12.3,1.8-18.4C209.6,420,195.6,401.5,177.1,398.4z
+                                     M78.7,466.1c-6.5,7.1-15.9,7.2-22.6,0.3c-4.9-5-7.7-12.7-7.7-22.3c0.2-6.5,2.1-13.6,7.7-19.3c6.7-6.9,16.1-6.8,22.6,0.2
+                                    C88.5,435.6,88.5,455.5,78.7,466.1z M169.6,466.6c-6.1,6.3-14.9,6.5-21.4,0.7c-11.2-10.2-11.2-32.9,0-43.2
+                                    c6.4-5.9,15.2-5.7,21.4,0.6c5.7,5.8,7.6,13.1,7.9,20.9C177.2,453.5,175.2,460.7,169.6,466.6z"/>
+                                <path d="M329,145h-432c-22.1,0-40,17.9-40,40v432c0,22.1,17.9,40,40,40h432c22.1,0,40-17.9,40-40V185C369,162.9,351.1,145,329,145z
+                                     M244.2,423.4c-1.4,11.4-3.8,23.1-7.9,33.8c-12,30.7-36,47.6-67.8,52.7c-18.2,2.9-36.9,3-57.1,4.5c-18.1-1.6-38-1.8-57.3-5.2
+                                    c-37.4-6.6-62.8-32.8-70.2-70.3c-3.8-19.1-4.9-38.3,1-57.3c3.1-9.8,8.2-18.5,14.8-26.4c0.9-1,1.7-2.5,1.6-3.8
+                                    c-1.1-17.2,0.9-34.2,6-50.6c4.2-13.7,1.1-12.9,16.3-8.9c18.3,4.8,34.3,14.7,50,25c1.8,1.2,4.6,1.7,6.8,1.3
+                                    c22.2-3.4,44.3-3.6,66.5,0.3c1.6,0.3,3.7-0.3,5.2-1.2c13.5-8.8,27.4-16.7,42.6-22.2c5.5-2,11.3-3.3,16.9-5c2.5-0.7,3.6,0.2,4.5,2.6
+                                    c6.8,19,9.6,38.5,8.6,58.6c-0.1,1.1,0.5,2.6,1.2,3.5C243,374.6,247.3,398.2,244.2,423.4z"/>
+                            </g>
+                        </svg>
+                        <p class="socmed-text">Github</p>
+                    </a>
+                    <a href="https://instagram.com/jampirojam" target="_blank">
+                        <svg fill="#000000" class="socmed-icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512" xml:space="preserve">
+                            <g>
+                                <path d="M113,446c24.8,0,45.1-20.2,45.1-45.1c0-9.8-3.2-18.9-8.5-26.3c-8.2-11.3-21.5-18.8-36.5-18.8s-28.3,7.4-36.5,18.8
+                                    c-5.3,7.4-8.5,16.5-8.5,26.3C68,425.8,88.2,446,113,446z" />
+                                <polygon
+                                    points="211.4,345.9 211.4,308.1 211.4,302.5 205.8,302.5 168,302.6 168.2,346 	" />
+                                <path d="M329,145h-432c-22.1,0-40,17.9-40,40v432c0,22.1,17.9,40,40,40h432c22.1,0,40-17.9,40-40V185C369,162.9,351.1,145,329,145z
+                                     M241,374.7v104.8c0,27.3-22.2,49.5-49.5,49.5h-157C7.2,529-15,506.8-15,479.5V374.7v-52.3c0-27.3,22.2-49.5,49.5-49.5h157
+                                    c27.3,0,49.5,22.2,49.5,49.5V374.7z" />
+                                <path d="M183,401c0,38.6-31.4,70-70,70c-38.6,0-70-31.4-70-70c0-9.3,1.9-18.2,5.2-26.3H10v104.8C10,493,21,504,34.5,504h157
+                                    c13.5,0,24.5-11,24.5-24.5V374.7h-38.2C181.2,382.8,183,391.7,183,401z" />
+                            </g>
+                        </svg>
+                        <p class="socmed-text">Instagram</p>
+                    </a>
+                    <a href="https://facebook.com/jampirojam" target="_blank">
+                        <svg fill="#000000" class="socmed-icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512" xml:space="preserve">
+                            <path d="M329,145h-432c-22.1,0-40,17.9-40,40v432c0,22.1,17.9,40,40,40h432c22.1,0,40-17.9,40-40V185C369,162.9,351.1,145,329,145z
+                            M169.5,357.6l-2.9,38.3h-39.3v133H77.7v-133H51.2v-38.3h26.5v-25.7c0-11.3,0.3-28.8,8.5-39.7c8.7-11.5,20.6-19.3,41.1-19.3
+                            c33.4,0,47.4,4.8,47.4,4.8l-6.6,39.2c0,0-11-3.2-21.3-3.2c-10.3,0-19.5,3.7-19.5,14v29.9H169.5z"/>
+                        </svg>
+                        <p class="socmed-text">Facebook</p>
+                    </a>
+                    <a href="https://twitter.com/ojam96" target="_blank">
+                        <svg fill="#000000" class="socmed-icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512" xml:space="preserve">
+                            <path d="M329,145h-432c-22.1,0-40,17.9-40,40v432c0,22.1,17.9,40,40,40h432c22.1,0,40-17.9,40-40V185C369,162.9,351.1,145,329,145z
+                            M215.2,361.2c0.1,2.2,0.1,4.5,0.1,6.8c0,69.5-52.9,149.7-149.7,149.7c-29.7,0-57.4-8.7-80.6-23.6c4.1,0.5,8.3,0.7,12.6,0.7
+                            c24.6,0,47.3-8.4,65.3-22.5c-23-0.4-42.5-15.6-49.1-36.5c3.2,0.6,6.5,0.9,9.9,0.9c4.8,0,9.5-0.6,13.9-1.9
+                            C13.5,430-4.6,408.7-4.6,383.2v-0.6c7.1,3.9,15.2,6.3,23.8,6.6c-14.1-9.4-23.4-25.6-23.4-43.8c0-9.6,2.6-18.7,7.1-26.5
+                            c26,31.9,64.7,52.8,108.4,55c-0.9-3.8-1.4-7.8-1.4-12c0-29,23.6-52.6,52.6-52.6c15.1,0,28.8,6.4,38.4,16.6
+                            c12-2.4,23.2-6.7,33.4-12.8c-3.9,12.3-12.3,22.6-23.1,29.1c10.6-1.3,20.8-4.1,30.2-8.3C234.4,344.5,225.5,353.7,215.2,361.2z" />
+                        </svg>
+                        <p class="socmed-text">Twitter</p>
+
+                    </a>
+                </div>
+            </div>
+            <div class="break-point"></div>
+        </div>
+
+        <div id="show-skills" class="show" style="display: none;">
+            <h2>Skills</h2>
+            <p class="project-intro">Skills shown do not mean am an expert, but at least I know the basics, so it's necessary to explore more when joining projects related to these skills.</p>
+            <h3>General</h3>
+            <div class="group-skill">
+                <!-- Frontend -->
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/html.webp"/>
+                    <p>HTML</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/css.webp"/>
+                    <p>CSS</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/sass.webp"/>
+                    <p>SASS</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/javascript.webp"/>
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/react.webp"/>
+                    <p>React Js</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/jquery.webp"/>
+                    <p>jQuery</p>
+                </div>
+            </div>
+            <div class="group-skill">
+                <!-- Backend -->
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/java.webp"/>
+                    <p>Java</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/spring.webp"/>
+                    <p>Spring</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/go.webp"/>
+                    <p>Go</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/node-js.webp"/>
+                    <p>Node Js</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/python.webp"/>
+                    <p>Python</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/ruby.webp"/>
+                    <p>Ruby</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/ruby-on-rails.webp"/>
+                    <p>Ruby on Rails</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/php.webp"/>
+                    <p>PHP</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/cpp.webp"/>
+                    <p>C++</p>
+                </div>
+            </div>
+            <div class="group-skill">
+                <!-- Database -->
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/mysql.webp"/>
+                    <p>MySQL</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/postgresql.webp"/>
+                    <p>PostgreSQL</p>
+                </div>
+            </div>
+            <div class="group-skill">
+                <!-- Testing -->
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/postman.webp"/>
+                    <p>Postman</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/katalon.webp"/>
+                    <p>Katalon</p>
+                </div>
+            </div>
+            <div class="group-skill">
+                <!-- Others -->
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/git.webp"/>
+                    <p>Git</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/camunda.webp"/>
+                    <p>Camunda</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/keycloak.webp"/>
+                    <p>Keycloak</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/docker.webp"/>
+                    <p>Docker</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/sonar-cloud.webp"/>
+                    <p>Sonarcloud</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/rabbit-mq.webp"/>
+                    <p>RabbitMQ</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/datadog.webp"/>
+                    <p>DataDog</p>
+                </div>
+            </div>
+            <div class="group-skill">
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/microsoft-office.webp"/>
+                    <p>Microsoft Office</p>
+                </div>
+            </div>
+            <div class="group-skill">
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/photoshop.webp"/>
+                    <p>Photoshop</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/coreldraw.webp"/>
+                    <p>CorelDraw</p>
+                </div>
+                <div class="skill click-in">
+                    <img src="./assets/img/logo/sony-vegas.webp"/>
+                    <p>Sony Vegas</p>
+                </div>
+            </div>
+            <h3>Languages</h3>
+            <div class="language-skill container">
+                <p>Indonesia</p>
+                <p>Native</p>
+                <p>English</p>
+                <p>Fluent</p>
+                <p>Arabic</p>
+                <p>12 years in school, inactive, and good understanding</p>
+            </div>
+        </div>
+
+        <div id="show-cv" class="show curriculum-vitae" style="display: none;">
+            <div class="about">
+                <h2>M. MACHRUSH ALIY SIROJJAM MUSHLICH</h2>
+                <div>
+                    <a href="wa.me/628388886086" target="_blank">+62 838 8886 086</a>
+                    <a href="mailto:jampirojam@gmail.com" target="_blank">jampirojam@gmail.com</a>
+                </div>
+            </div>
+            <div class="summary container">
+                <h3>Summary</h3>
+                <p>
+                    Highly skilled software development professional bringing enormous talents in face-paced
+                    environments. Team player who is willing to take on additional responsibility for meeting team
+                    goals to align with company business goals.
+                </p>
+            </div>
+            <div class="education container">
+                <h3>Education</h3>
+                <div class="section-list">
+                    <a>Universitas Islam Negeri Sunan Ampel</a>
+                    <a>Surabaya, Indonesia</a>
+                    <a>Information System</a>
+                    <a>09/2015-08/2021</a>
+                    <div class="section-note" target="Thesis: ">Open-Source Forensic Applications Performance
+                        Analysis on Smartphone Android-Based in Collecting Digital Evidence</div>
+                </div>
+                <!-- <div class="section-list">
+                <a>Institut Teknologi Sepuluh Nopember</a>
+                <a>Surabaya, Indonesia</a>
+                <a>Informatic Engineering</a>
+                <a>Soon to be</a>
+            </div> -->
+            </div>
+            <div class="work container">
+                <h3>Experience</h3>
+                <div class="section-list">
+                    <a>PT BFI Finance Indonesia Tbk</a>
+                    <a>South Tangerang, Indonesia</a>
+                    <a>Backend Engineer</a>
+                    <a>06/2022-Present</a>
+                    <div class="section-desc">
+                        <p>Involved in design and development scalable micro-services based on evolving user
+                            requirements.</p>
+                        <P>Performed unit-tests to validate service free from bugs before actual tested and improve
+                            code coverage.</P>
+                        <p>Collaborated with cross-functional development in Agile environment to built robust
+                            system solution.</p>
+                        <p>Edited and proofread technical documents on changing systems for accuracy and
+                            consistency.</p>
+                    </div>
+                    <div class="section-note" target="Environment: ">Java, Spring Boot, Git, Camunda, RabbitMQ,
+                        PostgreSQL, Keycloak, Docker, Postman, DataDog, Sonarcloud</div>
+                </div>
+                <div class="section-list">
+                    <a>PT Radio Merdeka Lokatama</a>
+                    <a>Surabaya, Indonesia</a>
+                    <a>IT Support (Intern)</a>
+                    <a>01/2020-02/2020</a>
+                    <div class="section-desc">
+                        <p>Determined hardware, software, and network system issues using proactive troubleshooting
+                            techniques.</p>
+                        <p>Documented support interactions for future reference.</p>
+                        <p>Wrote announced ads, song switches, and breaking news segments for radio broadcasts.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="organization container">
+                <h3>Organization</h3>
+                <div class="section-list">
+                    <a>Lembaga Pers Mahasiswa Riset</a>
+                    <a>Surabaya, Indonesia</a>
+                    <a>Editorial Head</a>
+                    <a>09/2017-09/2018</a>
+                    <div class="section-desc">
+                        <p>Proofread, edited, and evaluated final copy to verify content aligned with established
+                            guidelines.</p>
+                        <p>Collaborated with other members to support planned activities to exceed team goals.</p>
+                    </div>
+                </div>
+                <div class="section-list">
+                    <a>Himpunan Mahasiswa Prodi Sistem Informasi</a>
+                    <a>Surabaya, Indonesia</a>
+                    <a>Secretary</a>
+                    <a>06/2017-05/2018</a>
+                    <div class="section-desc">
+                        <p>Provided document support for various projects and departments.</p>
+                        <p>Supported organization leaders by managing, scheduling, and organizing every planned
+                            activity.</p>
+                        <p>Built and maintained excellent relationships with internal and external organization.</p>
+                    </div>
+                </div>
+                <div class="section-list">
+                    <a>Pergerakan Mahasiswa Islam Indonesia</a>
+                    <a>Surabaya, Indonesia</a>
+                    <a>Member</a>
+                    <a>12/2015-0/20</a>
+                    <div class="section-desc">
+                        <p>Collaborated with other members to support planned activities to exceed team goals.</p>
+                        <p>Analyzed problems and worked with teams to develop solutions.</p>
+                        <p>Participated in weekly study meetings related current issues.</p>
+                    </div>
+                </div>
+                <div class="section-list">
+                    <a>Remaja Masjid Jami Darun Najah</a>
+                    <a>Surabaya, Indonesia</a>
+                    <a>Secretary</a>
+                    <a>06/2017-05/2018</a>
+                    <div class="section-desc">
+                        <p>Provided document support for various projects and departments.</p>
+                        <p>Supported organization leaders by managing, scheduling, and organizing every planned
+                            activity.</p>
+                        <p>Built and maintained excellent relationships with internal and external organization.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="certificate container">
+                <h3>Certificate & Training</h3>
+                <h4>2023:</h4>
+                <div class="list-per-year">
+                    <p>Backend Development using Javascript</p>
+                    <p>Dicoding</p>
+                    <p>Cloud Practitioner Essentials</p>
+                    <p>Dicoding</p>
+                    <p>Backend Development using Go Programming</p>
+                    <p>Hacktiv8</p>
+                </div>
+                <h4>2022:</h4>
+                <div class="list-per-year">
+                    <p>Big Data Associate</p>
+                    <p>Alibaba</p>
+                    <p>Automated Testing using Katalon Studio</p>
+                    <p>Hacktiv8</p>
+                    <p>Backend Development using Java</p>
+                    <p>Hacktiv8</p>
+                    <p>Scrum Master</p>
+                    <p>Rakamin Academy</p>
+                    <p>Full Stack Development</p>
+                    <p>Prograte</p>
+                </div>
+                <h4>2021:</h4>
+                <div class="list-per-year">
+                    <p>Test of English as a Foreign Language</p>
+                    <p>P2B UINSA</p>
+                </div>
+                <h4>2018:</h4>
+                <div class="list-per-year">
+                    <p>Microsoft Office 2010</p>
+                    <p>Multimatics</p>
+                </div>
+                <h4>2017:</h4>
+                <div class="list-per-year">
+                    <p>Database Administration</p>
+                    <p>Inixindo</p>
+                </div>
+                <h4>2016:</h4>
+                <div class="list-per-year">
+                    <p>Microsoft Office Specialist</p>
+                    <p>Certiport</p>
+                    <p>Test of Arabic as a Foreign Language</p>
+                    <p>P2B UINSA</p>
+                </div>
+            </div>
+            <div class="publication container">
+                <h3>Publication</h3>
+                <h4>2022:</h4>
+                <div class="data-list">
+                    <p>Forensik Digital: Forensik Perangkat Seluler</p>
+                    <p>Forensic Analysis using Autopsy to Get Deleted WhatsApp Data</p>
+                </div>
+                <h4>2021:</h4>
+                <div class="data-list">
+                    <p>Analisis Kinerja Aplikasi Forensik Open-Source pada Ponsel Berbasis Android dalam Mendapatkan
+                        Bukti Digital</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <footer id="footer">
+    </footer> -->
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
